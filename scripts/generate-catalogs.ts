@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
-import { mkdir, rm, writeFile } from 'node:fs/promises';
+import { execFile } from 'node:child_process';
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -17,6 +18,11 @@ import {
 	type PersistedBangSource,
 	type ZbangCatalog
 } from '../src/lib/bang-catalog.ts';
+import {
+	compareCatalogSnapshots,
+	formatCatalogChangeReport,
+	type CatalogSnapshot
+} from './catalog-change-report.ts';
 
 type CatalogOutput = {
 	provider: BangProviderId;
@@ -27,11 +33,15 @@ type CatalogOutput = {
 
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const catalogDir = resolve(rootDir, 'catalogs');
+const providers = ['duckduckgo', 'kagi'] satisfies BangProviderId[];
 
 async function main() {
-	const sources = new Map(
-		(await Promise.all(BANG_SOURCES.map(downloadSource))).map((source) => [source.id, source])
-	);
+	const [previousCatalogs, lastCommittedUpdate, downloadedSources] = await Promise.all([
+		readCatalogBaselines(),
+		getLastCommittedCatalogUpdate(),
+		Promise.all(BANG_SOURCES.map(downloadSource))
+	]);
+	const sources = new Map(downloadedSources.map((source) => [source.id, source]));
 	const duckDuckGoSource = requireSource(sources, 'duckduckgo');
 	const providerCatalogs = [
 		{
@@ -47,8 +57,11 @@ async function main() {
 			)
 		}
 	] satisfies Array<{ provider: BangProviderId; catalog: ZbangCatalog }>;
-	const outputs: CatalogOutput[] = providerCatalogs.flatMap(({ provider, catalog }) => {
-		const variants = splitZbangCatalog(catalog);
+	const currentCatalogs = new Map(
+		providerCatalogs.map(({ provider, catalog }) => [provider, splitZbangCatalog(catalog)])
+	);
+	const outputs: CatalogOutput[] = providerCatalogs.flatMap(({ provider }) => {
+		const variants = requireCatalogSnapshot(currentCatalogs, provider);
 
 		return BANG_CATALOG_VARIANTS.map((variant) => ({
 			provider,
@@ -60,10 +73,12 @@ async function main() {
 
 	await mkdir(catalogDir, { recursive: true });
 	await Promise.all(
-		(['duckduckgo', 'kagi'] satisfies BangProviderId[]).map((provider) =>
+		providers.map((provider) =>
 			rm(resolve(catalogDir, `zbang.catalog.${provider}.json`), { force: true })
 		)
 	);
+
+	const generatedFiles: Array<CatalogOutput & { bytes: number; path: string }> = [];
 
 	for (const output of outputs) {
 		const errors = validateZbangCatalog(output.catalog, output.provider);
@@ -75,21 +90,35 @@ async function main() {
 		const json = `${JSON.stringify(output.catalog, null, '\t')}\n`;
 		const path = resolve(catalogDir, output.filename);
 		await writeFile(path, json);
+		generatedFiles.push({ ...output, bytes: Buffer.byteLength(json), path });
+	}
 
+	const changes = providers.map((provider) =>
+		compareCatalogSnapshots(
+			previousCatalogs.get(provider),
+			requireCatalogSnapshot(currentCatalogs, provider)
+		)
+	);
+	console.log(formatCatalogChangeReport(changes, lastCommittedUpdate));
+	console.log('\nGenerated files');
+
+	for (const output of generatedFiles) {
 		console.log(
 			[
-				`${output.provider} ${output.variant}: ${output.catalog.items.length.toLocaleString()} records`,
+				`  ${output.provider} ${output.variant}: ${output.catalog.items.length.toLocaleString()} records`,
 				`${output.catalog.dedupedCount?.toLocaleString() ?? 0} deduped`,
-				`${Buffer.byteLength(json).toLocaleString()} bytes`,
-				path
+				`${output.bytes.toLocaleString()} bytes`,
+				output.path
 			].join(' | ')
 		);
 	}
 
+	console.log('\nSources');
+
 	for (const source of sources.values()) {
 		console.log(
 			[
-				`${source.id}: ${source.bangCount?.toLocaleString() ?? 'unknown'} source records`,
+				`  ${source.id}: ${source.bangCount?.toLocaleString() ?? 'unknown'} source records`,
 				`sha256 ${source.hash}`,
 				source.url
 			].join(' | ')
@@ -99,6 +128,62 @@ async function main() {
 
 function getCatalogFilename(provider: BangProviderId, variant: BangCatalogVariant) {
 	return `zbang.catalog.${provider}.${variant}.json`;
+}
+
+async function readCatalogBaselines() {
+	const baselines = new Map<BangProviderId, CatalogSnapshot>();
+
+	await Promise.all(
+		providers.map(async (provider) => {
+			const entries = await Promise.all(
+				BANG_CATALOG_VARIANTS.map(async (variant) => {
+					const path = resolve(catalogDir, getCatalogFilename(provider, variant));
+
+					try {
+						const value: unknown = JSON.parse(await readFile(path, 'utf8'));
+
+						if (validateZbangCatalog(value, provider).length) return undefined;
+
+						return [variant, value as ZbangCatalog] as const;
+					} catch {
+						return undefined;
+					}
+				})
+			);
+
+			if (entries.every((entry) => entry !== undefined)) {
+				baselines.set(provider, Object.fromEntries(entries) as CatalogSnapshot);
+			}
+		})
+	);
+
+	return baselines;
+}
+
+function getLastCommittedCatalogUpdate() {
+	const catalogPaths = providers.flatMap((provider) =>
+		BANG_CATALOG_VARIANTS.map((variant) => `catalogs/${getCatalogFilename(provider, variant)}`)
+	);
+
+	return new Promise<string | undefined>((resolvePromise) => {
+		execFile(
+			'git',
+			['log', '-1', '--format=%cI', '--', ...catalogPaths],
+			{ cwd: rootDir, encoding: 'utf8' },
+			(error, stdout) => resolvePromise(error ? undefined : stdout.trim() || undefined)
+		);
+	});
+}
+
+function requireCatalogSnapshot(
+	catalogs: Map<BangProviderId, CatalogSnapshot>,
+	provider: BangProviderId
+) {
+	const catalog = catalogs.get(provider);
+
+	if (!catalog) throw new Error(`${provider} catalog has not been generated`);
+
+	return catalog;
 }
 
 async function downloadSource(source: (typeof BANG_SOURCES)[number]): Promise<PersistedBangSource> {

@@ -479,7 +479,7 @@ function normalizeBangUrl(url: string, provider: BangProviderId) {
 	return withPlaceholder;
 }
 
-function getUrlIdentity(url: string) {
+export function getUrlIdentity(url: string) {
 	const placeholder = '__ZBANG_QUERY_PLACEHOLDER__';
 	const normalized = deepUnescape(url).trim().replaceAll('%s', placeholder);
 
