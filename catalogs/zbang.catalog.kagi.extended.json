@@ -5,11 +5,11 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "7fb837c600ba3e3b0bd0785751e618a928665325a06a47f1ae72e2fba5c73bff"
+			"hash": "c828476c7dd348e4a3461def4fe7aa89172079b4c47a25422e00511a39cef2c0"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
-			"hash": "79d10c17dddcb13c53256afa5e875ad29872c839e2320c45dea8c860e52fedde"
+			"hash": "32eb5eee407ba3e49f6f319164332fd1bdc23007b260f4019c202739e9fa5810"
 		},
 		{
 			"url": "https://duckduckgo.com/bang.js",
@@ -7539,15 +7539,6 @@
 			"tags": ["Online Services/Tools"],
 			"urls": {
 				"s": "https://www.blendswap.com/blends/search?keywords=%s"
-			}
-		},
-		{
-			"popularity": 0,
-			"name": "Blick am Abend",
-			"code": ["!blickaa"],
-			"tags": ["News/Newspaper"],
-			"urls": {
-				"s": "https://www.blickamabend.ch/suche/?q=%s"
 			}
 		},
 		{
@@ -68634,7 +68625,7 @@
 			"code": ["!watson"],
 			"tags": ["News/Aggregators"],
 			"urls": {
-				"s": "https://www.watson.ch/u/search?#%s"
+				"s": "https://www.watson.ch/u/search?q=%s"
 			}
 		},
 		{
