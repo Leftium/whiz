@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "c828476c7dd348e4a3461def4fe7aa89172079b4c47a25422e00511a39cef2c0"
+			"hash": "c5aab24a2d21caf1d16759736eb96dc4ab6b7f0e969853870d4854e49495d719"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -22997,6 +22997,15 @@
 		},
 		{
 			"popularity": 1,
+			"name": "KLIPY",
+			"code": ["!klipy"],
+			"tags": ["Multimedia/Images"],
+			"urls": {
+				"s": "https://klipy.com/search/%s"
+			}
+		},
+		{
+			"popularity": 1,
 			"name": "Kobo UK",
 			"code": ["!kobouk"],
 			"tags": ["Shopping/Online"],
@@ -26103,7 +26112,7 @@
 		{
 			"popularity": 1,
 			"name": "OpenRouter",
-			"code": ["!opr"],
+			"code": ["!opr", "!openrouter"],
 			"tags": ["Online Services/AI Chatbots"],
 			"urls": {
 				"s": "https://openrouter.ai/models?q=%s"
