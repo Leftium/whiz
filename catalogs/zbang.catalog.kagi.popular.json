@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "c5aab24a2d21caf1d16759736eb96dc4ab6b7f0e969853870d4854e49495d719"
+			"hash": "5bff2eaad1a6050a4410fa42a386a8f7291e57b8ac668e59e5c027fea29140be"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -8255,7 +8255,7 @@
 			"code": ["!ark"],
 			"tags": ["Tech/Companies"],
 			"urls": {
-				"s": "https://ark.intel.com/search?q=%s"
+				"s": "https://www.intel.com/content/www/us/en/search.html#cf-tabfilter=Products&q=%s"
 			}
 		},
 		{
@@ -22062,6 +22062,15 @@
 			"tags": ["Tech/Programming"],
 			"urls": {
 				"s": "https://github.com/notifications?query=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "GitHub Pull Requests",
+			"code": ["!ghpr", "!ghpull"],
+			"tags": ["Tech/Programming"],
+			"urls": {
+				"s": "https://github.com/search?q=%s&type=pullrequests"
 			}
 		},
 		{
