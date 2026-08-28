@@ -5,11 +5,11 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "5bff2eaad1a6050a4410fa42a386a8f7291e57b8ac668e59e5c027fea29140be"
+			"hash": "1810d8f6c03c9f784d2eb4235ea74d3508f0ef1ee8386f6ec20cc568dfebe5ca"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
-			"hash": "32eb5eee407ba3e49f6f319164332fd1bdc23007b260f4019c202739e9fa5810"
+			"hash": "cdfbac7d6f7c81ac3c560dc9e7b135a88280d63a9b0c9676f4990c939fc1849b"
 		},
 		{
 			"url": "https://duckduckgo.com/bang.js",
@@ -9962,7 +9962,7 @@
 		{
 			"popularity": 13,
 			"name": "DuckDuckGo Community",
-			"code": ["!dc", "!forum"],
+			"code": ["!dc"],
 			"tags": ["Online Services/Search (DDG)"],
 			"urls": {
 				"s": "https://duck.co/forum/search?q=%s"
@@ -26557,6 +26557,60 @@
 			"tags": ["Online Services/Social"],
 			"urls": {
 				"s": "https://www.scoop.it/search?q=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Search with Academic lens",
+			"code": ["!academic"],
+			"tags": [],
+			"urls": {
+				"s": "https://kagi.com/search?q=%s&lens=academic"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Search with Fediverse Forums lens",
+			"code": ["!fediverse"],
+			"tags": [],
+			"urls": {
+				"s": "https://kagi.com/search?q=%s&lens=fediverse"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Search with Forums lens",
+			"code": ["!forum", "!forums"],
+			"tags": [],
+			"urls": {
+				"s": "https://kagi.com/search?q=%s&lens=forums"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Search with Programming lens",
+			"code": ["!programming"],
+			"tags": [],
+			"urls": {
+				"s": "https://kagi.com/search?q=%s&lens=programming"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Search with Small Web lens",
+			"code": ["!smallweb", "!small_web"],
+			"tags": [],
+			"urls": {
+				"s": "https://kagi.com/search?q=%s&lens=small_web"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Search with Usenet/Archive lens",
+			"code": ["!usenetarchive", "!usenet_archive"],
+			"tags": [],
+			"urls": {
+				"s": "https://kagi.com/search?q=%s&lens=usenet_archive"
 			}
 		},
 		{
