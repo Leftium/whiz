@@ -9,6 +9,7 @@
 		"generate:catalogs": "node scripts/generate-catalogs.ts && prettier --write --log-level warn catalogs/*.json",
 		"preview": "vite preview",
 		"test:catalog-report": "node --test scripts/catalog-change-report.test.ts",
+		"test:search-date-filters": "node --test src/lib/launcher/search-date-filters.test.ts",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",

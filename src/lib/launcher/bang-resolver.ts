@@ -3,6 +3,7 @@ import { defaultCustomSearchTemplate, type SearchProvider } from '$lib/execution
 
 import { getBangCodeSet, removeBangCodeOverlaps } from './bang-code';
 import { createBangCodeMap, parseBangComposition } from './bang-composition';
+import { getKagiSearchUrl } from './search-date-filters';
 import type { BangComposition } from './types';
 
 export type BangExecutionSettings = {
@@ -156,9 +157,10 @@ export function getSearchUrl(
 		? customTemplate
 		: defaultCustomSearchTemplate;
 
+	if (provider === 'kagi') return getKagiSearchUrl(query);
+
 	if (!trimmedQuery) {
 		return {
-			kagi: 'https://kagi.com/',
 			duckduckgo: 'https://duckduckgo.com/',
 			google: 'https://www.google.com/',
 			custom: customSearchTemplate.replace(/%s/g, '')
@@ -168,7 +170,6 @@ export function getSearchUrl(
 	const encodedQuery = encodeURIComponent(trimmedQuery);
 
 	return {
-		kagi: `https://kagi.com/search?q=${encodedQuery}`,
 		duckduckgo: `https://duckduckgo.com/?q=${encodedQuery}`,
 		google: `https://www.google.com/search?q=${encodedQuery}`,
 		custom: customSearchTemplate.replace(/%s/g, encodedQuery)
