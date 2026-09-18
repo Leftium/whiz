@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "b690c4d6f7766b238f73db9d6946129297fc8a937b0625d2814536b79665bd41"
+			"hash": "cf7a8110f0af9817e88aedaabc9726b70b9ae0f177256e6a03ae8562eae3ccec"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -36027,7 +36027,7 @@
 			"code": ["!denicheur"],
 			"tags": ["Shopping/Online (deals)"],
 			"urls": {
-				"s": "https://ledenicheur.fr/#rparams=ss=%s"
+				"s": "https://ledenicheur.fr/search?query=%s"
 			}
 		},
 		{
@@ -50171,20 +50171,11 @@
 		},
 		{
 			"popularity": 0,
-			"name": "PriceSpy",
-			"code": ["!psnz"],
-			"tags": ["Shopping/Online"],
-			"urls": {
-				"s": "https://pricespy.co.nz/search?q=%s"
-			}
-		},
-		{
-			"popularity": 0,
 			"name": "pricespy.co.nz",
-			"code": ["!pricespy"],
+			"code": ["!psnz", "!pricespy"],
 			"tags": ["Shopping/Online (deals)"],
 			"urls": {
-				"s": "https://pricespy.co.nz/search?search=%s"
+				"s": "https://pricespy.co.nz/search?query=%s"
 			}
 		},
 		{
@@ -50193,7 +50184,7 @@
 			"code": ["!psuk"],
 			"tags": ["Shopping/Online (deals)"],
 			"urls": {
-				"s": "https://pricespy.co.uk/search?q=%s"
+				"s": "https://pricespy.co.uk/search?query=%s"
 			}
 		},
 		{
@@ -50301,7 +50292,7 @@
 			"code": ["!pjno"],
 			"tags": ["Shopping/Online (deals)"],
 			"urls": {
-				"s": "https://www.prisjakt.no/search?search=%s"
+				"s": "https://www.prisjakt.no/search?query=%s"
 			}
 		},
 		{
@@ -55980,7 +55971,7 @@
 			"code": ["!shm", "!shikimori", "!shiki"],
 			"tags": ["Entertainment/Movies"],
 			"urls": {
-				"s": "https://shikimori.org/animes?search=%s"
+				"s": "https://shikimori.io/animes?search=%s"
 			}
 		},
 		{

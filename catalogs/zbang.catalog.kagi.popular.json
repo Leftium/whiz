@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "b690c4d6f7766b238f73db9d6946129297fc8a937b0625d2814536b79665bd41"
+			"hash": "cf7a8110f0af9817e88aedaabc9726b70b9ae0f177256e6a03ae8562eae3ccec"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -5402,7 +5402,7 @@
 			"code": ["!pj", "!prisjakt", "!pris"],
 			"tags": ["Shopping/Online (deals)"],
 			"urls": {
-				"s": "https://www.prisjakt.nu/search?search=%s"
+				"s": "https://www.prisjakt.nu/search?query=%s"
 			}
 		},
 		{
@@ -16279,15 +16279,6 @@
 		},
 		{
 			"popularity": 4,
-			"name": "Dota 2 Wiki",
-			"code": ["!dota"],
-			"tags": ["Entertainment/Games (specific)"],
-			"urls": {
-				"s": "https://dota2.gamepedia.com/index.php?search=%s"
-			}
-		},
-		{
-			"popularity": 4,
 			"name": "Douban (movie)",
 			"code": ["!dbmovie"],
 			"tags": ["Entertainment/Movies"],
@@ -20086,6 +20077,15 @@
 		},
 		{
 			"popularity": 2,
+			"name": "Dota 2 Wiki",
+			"code": ["!dota"],
+			"tags": ["Entertainment/Games (specific)"],
+			"urls": {
+				"s": "https://liquipedia.net/dota2/index.php?search=%s"
+			}
+		},
+		{
+			"popularity": 2,
 			"name": "Equestripedia",
 			"code": ["!mlp"],
 			"tags": ["Entertainment/TV"],
@@ -22952,11 +22952,30 @@
 		},
 		{
 			"popularity": 1,
-			"name": "Kagi Universal Summarizer (Key Moments)",
-			"code": ["!sumt", "!summarizekey", "!sumk", "!sumkey", "!summarisekey"],
+			"name": "Kagi Universal Summarizer (Bullet Points)",
+			"code": [
+				"!sumb",
+				"!summarizebullet",
+				"!sumk",
+				"!sumt",
+				"!sumkey",
+				"!sumbullet",
+				"!summarisekey",
+				"!summarizekey",
+				"!summarisebullet"
+			],
 			"tags": [],
 			"urls": {
-				"s": "https://kagi.com/summarizer?url=%s&summary=takeaway"
+				"s": "https://kagi.com/summarizer?url=%s&summary=keypoints"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Kagi Universal Summarizer (ELI5)",
+			"code": ["!sume", "!summarizeeli5", "!sumeli5", "!summariseeli5"],
+			"tags": [],
+			"urls": {
+				"s": "https://kagi.com/summarizer?url=%s&summary=eli5"
 			}
 		},
 		{
@@ -26269,6 +26288,15 @@
 			"tags": ["Tech/Design"],
 			"urls": {
 				"s": "https://www.printables.com/search/models?q=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Prisjagt",
+			"code": ["!pjdk", "!prisjagt"],
+			"tags": ["Shopping/Online (deals)"],
+			"urls": {
+				"s": "https://www.prisjagt.dk/search?query=%s"
 			}
 		},
 		{
