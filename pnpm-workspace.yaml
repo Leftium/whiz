@@ -4,4 +4,4 @@ packages:
 allowBuilds:
   esbuild: true
 minimumReleaseAgeExclude:
-  - '@leftium/nimble.css@0.19.0'
+  - '@leftium/nimble.css@0.19.0 || 0.24.0'
