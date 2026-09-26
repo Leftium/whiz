@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "cf7a8110f0af9817e88aedaabc9726b70b9ae0f177256e6a03ae8562eae3ccec"
+			"hash": "fd8eb07dcc9b4896265b66c4343a221be10775e94254d304c02db90e16070e5b"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -23003,6 +23003,15 @@
 			"tags": ["Tech/Tools"],
 			"urls": {
 				"s": "https://bugs.kde.org/buglist.cgi?quicksearch=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "KHInsider Video Game Music",
+			"code": ["!khi", "!vgm"],
+			"tags": ["Multimedia/Music"],
+			"urls": {
+				"s": "https://downloads.khinsider.com/search?search=%s"
 			}
 		},
 		{
