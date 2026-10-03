@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "fd8eb07dcc9b4896265b66c4343a221be10775e94254d304c02db90e16070e5b"
+			"hash": "100973b21c0d0f924a34d750b9f5caa6a32285310406f69be6e6eb0a90414aa7"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -13,7 +13,7 @@
 		},
 		{
 			"url": "https://duckduckgo.com/bang.js",
-			"hash": "463ed8290876e0b03ca1f592f56d30f5a1f9d1859bbaa32980f9c183cc87f70e"
+			"hash": "09d5946124f3342cf07c7facdee31368f7d76a2a0653194d7a4b24d6c6bcaf15"
 		}
 	],
 	"items": [
@@ -4869,7 +4869,7 @@
 		{
 			"popularity": 51,
 			"name": "Naver Map",
-			"code": ["!nmap"],
+			"code": ["!nmap", "!navm"],
 			"tags": ["Online Services/Maps"],
 			"urls": {
 				"s": "https://map.naver.com/?query=%s"
@@ -16216,15 +16216,6 @@
 		},
 		{
 			"popularity": 4,
-			"name": "Daum Map",
-			"code": ["!dmap"],
-			"tags": ["Online Services/Maps"],
-			"urls": {
-				"s": "https://map.daum.net/?q=%s"
-			}
-		},
-		{
-			"popularity": 4,
 			"name": "deepl.com",
 			"code": ["!deeplfr"],
 			"tags": ["Translation/General"],
@@ -21557,7 +21548,7 @@
 			"code": ["!cdev"],
 			"tags": ["Tech/Sysadmin (man)"],
 			"urls": {
-				"s": "https://developers.cloudflare.com/search/?query=%s"
+				"s": "https://developers.cloudflare.com//?q=%s"
 			}
 		},
 		{
@@ -21566,7 +21557,7 @@
 			"code": ["!cdmn", "!cdomain"],
 			"tags": ["Tech/domains"],
 			"urls": {
-				"s": "https://domains.cloudflare.com/?domain=%s"
+				"s": "https://www.cloudflare.com/domains/search?q=%s"
 			}
 		},
 		{
@@ -22985,6 +22976,15 @@
 			"tags": [],
 			"urls": {
 				"s": "https://kagi.com/summarizer?url=%s&summary=summary"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Kakao Map",
+			"code": ["!kmap", "!dmap", "!kamap"],
+			"tags": ["Online Services/Maps"],
+			"urls": {
+				"s": "https://map.kakao.com/?q=%s"
 			}
 		},
 		{
