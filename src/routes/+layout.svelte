@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import { onMount } from 'svelte';
-	import { initSettings } from '$lib/settings.svelte';
+	import { initSettings } from '#lib/settings.svelte.js';
 	import '../app.css';
 
 	let { children } = $props();
@@ -10,7 +10,7 @@
 		initSettings();
 
 		if ('serviceWorker' in navigator) {
-			void navigator.serviceWorker.register(`${base}/service-worker.js`, { type: 'module' });
+			void navigator.serviceWorker.register(`${resolve('/')}service-worker.js`, { type: 'module' });
 		}
 	});
 </script>

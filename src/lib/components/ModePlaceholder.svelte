@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import Header from '$lib/components/Header.svelte';
-	import { getLauncherMode } from '$lib/launcher/modes';
-	import type { LauncherModeId } from '$lib/launcher/types';
+	import Header from '#lib/components/Header.svelte';
+	import { getLauncherMode } from '#lib/launcher/modes.js';
+	import type { LauncherModeId } from '#lib/launcher/types.js';
 
 	let { modeId }: { modeId: LauncherModeId } = $props();
 	const mode = $derived(getLauncherMode(modeId));

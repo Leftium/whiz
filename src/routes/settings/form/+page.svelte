@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { BangProviderId } from '$lib/bang-data';
-	import Header from '$lib/components/Header.svelte';
+	import type { BangProviderId } from '#lib/bang-data.js';
+	import Header from '#lib/components/Header.svelte';
 	import {
 		setBangProvider,
 		setColorScheme,
@@ -8,7 +8,7 @@
 		settings,
 		type ColorScheme,
 		type SearchProvider
-	} from '$lib/settings.svelte';
+	} from '#lib/settings.svelte.js';
 
 	const searchProviders: { value: SearchProvider; label: string }[] = [
 		{ value: 'kagi', label: 'Kagi' },

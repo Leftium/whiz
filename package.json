@@ -11,7 +11,7 @@
 		"test:catalog-report": "node --test scripts/catalog-change-report.test.ts",
 		"test:search-date-filters": "node --test src/lib/launcher/search-date-filters.test.ts",
 		"prepare": "svelte-kit sync || echo ''",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json && tsc --noEmit --project src/service-worker/tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
@@ -19,8 +19,8 @@
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@leftium/nimble.css": "^0.24.0",
-		"@sveltejs/adapter-auto": "^7.0.1",
-		"@sveltejs/kit": "^2.70.3",
+		"@sveltejs/adapter-auto": "^8.0.0",
+		"@sveltejs/kit": "^3.0.0",
 		"@sveltejs/vite-plugin-svelte": "^7.3.0",
 		"@types/node": "^26.6.1",
 		"eslint": "^10.10.0",
@@ -30,7 +30,7 @@
 		"open-props": "^1.7.23",
 		"prettier": "^3.9.8",
 		"prettier-plugin-svelte": "^4.1.1",
-		"svelte": "^5.57.0",
+		"svelte": "^5.57.1",
 		"svelte-check": "^4.7.6",
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.70.0",
@@ -43,5 +43,9 @@
 		"fuzzysort": "^3.1.0",
 		"svelte-inspect-value": "^0.11.3",
 		"wellcrafted": "^0.43.0"
+	},
+	"imports": {
+		"#lib": "./src/lib/index.ts",
+		"#lib/*": "./src/lib/*"
 	}
 }

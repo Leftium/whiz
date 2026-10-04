@@ -1,5 +1,5 @@
-import type { ZbangRecord } from '$lib/bang-data';
-import type { BangHighlightSegment } from '$lib/bang-filter';
+import type { ZbangRecord } from '#lib/bang-data.js';
+import type { BangHighlightSegment } from '#lib/bang-filter.js';
 
 export type LauncherHref = `/bang#${string}`;
 

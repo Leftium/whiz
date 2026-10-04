@@ -15,8 +15,8 @@
 		{/if}
 	</a>
 
-	{#if page.url.pathname !== resolve('/settings/form')}
-		<a class="secondary outline settings" href={resolve('/settings/form')}>settings</a>
+	{#if page.url.pathname !== resolve('settings/form')}
+		<a class="secondary outline settings" href={resolve('settings/form')}>settings</a>
 	{/if}
 </header>
 

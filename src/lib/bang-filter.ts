@@ -1,6 +1,6 @@
 import fuzzysort from 'fuzzysort';
 
-import type { MyBangRecord, ZbangRecord } from '$lib/bang-data';
+import type { MyBangRecord, ZbangRecord } from '#lib/bang-data.js';
 
 export type BangFilterResult = {
 	item: ZbangRecord;

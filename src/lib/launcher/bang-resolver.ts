@@ -1,5 +1,5 @@
-import type { ZbangRecord } from '$lib/bang-data';
-import { defaultCustomSearchTemplate, type SearchProvider } from '$lib/execution-settings';
+import type { ZbangRecord } from '#lib/bang-data.js';
+import { defaultCustomSearchTemplate, type SearchProvider } from '#lib/execution-settings.js';
 
 import { getBangCodeSet, removeBangCodeOverlaps } from './bang-code';
 import { createBangCodeMap, parseBangComposition } from './bang-composition';

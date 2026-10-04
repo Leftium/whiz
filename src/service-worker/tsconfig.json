@@ -1,0 +1,8 @@
+{
+	"extends": "$app/tsconfig/service-worker",
+	"compilerOptions": {
+		"rewriteRelativeImportExtensions": true,
+		"strict": true
+	},
+	"include": ["../service-worker.ts"]
+}

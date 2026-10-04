@@ -7,7 +7,7 @@ import {
 	type BangProviderId,
 	type RankedZbangCatalog,
 	type ZbangCatalog
-} from '$lib/bang-catalog';
+} from '#lib/bang-catalog.js';
 
 type CatalogLoadError =
 	| { kind: 'network'; message: string }

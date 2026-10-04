@@ -1,4 +1,4 @@
-import type { ZbangRecord } from '$lib/bang-data';
+import type { ZbangRecord } from '#lib/bang-data.js';
 
 import { normalizeBangCode } from './bang-code';
 import type { BangComposition, BangCompositionTarget, BangEntry } from './types';

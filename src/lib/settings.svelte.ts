@@ -1,16 +1,16 @@
-import { writeExecutionSettings } from '$lib/bang-data';
+import { writeExecutionSettings } from '#lib/bang-data.js';
 import {
 	defaultExecutionSettings,
 	isBangProvider,
 	isSearchProvider,
 	type ExecutionSettings,
 	type SearchProvider
-} from '$lib/execution-settings';
-import { readHistoryRecordingEnabled, writeHistoryRecordingEnabled } from '$lib/search-history';
+} from '#lib/execution-settings.js';
+import { readHistoryRecordingEnabled, writeHistoryRecordingEnabled } from '#lib/search-history.js';
 
-import type { BangProviderId } from '$lib/bang-data';
+import type { BangProviderId } from '#lib/bang-data.js';
 
-export type { ExecutionSettings, SearchProvider } from '$lib/execution-settings';
+export type { ExecutionSettings, SearchProvider } from '#lib/execution-settings.js';
 
 export type ColorScheme = '' | 'dark' | 'light';
 
