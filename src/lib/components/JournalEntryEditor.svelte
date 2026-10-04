@@ -1,5 +1,5 @@
 <script module lang="ts">
-	import type { JournalEntry as EditorJournalEntry } from '$lib/journal';
+	import type { JournalEntry as EditorJournalEntry } from '#lib/journal.js';
 
 	export type JournalEntryEditorSession = {
 		key: string;
@@ -21,7 +21,7 @@
 		parseJournalMarkdown,
 		type JournalEntry,
 		type JournalMarkdownInline
-	} from '$lib/journal';
+	} from '#lib/journal.js';
 
 	let {
 		session,

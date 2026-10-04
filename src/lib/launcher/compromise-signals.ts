@@ -1,4 +1,4 @@
-import { createCompromiseDoc } from '$lib/compromise';
+import { createCompromiseDoc } from '#lib/compromise.js';
 import type { CompromiseSignals, KeywordSignal } from './types';
 
 type MoneyJson = { text?: string; number?: { prefix?: string; unit?: string } };

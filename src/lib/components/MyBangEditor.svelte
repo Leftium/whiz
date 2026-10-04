@@ -1,6 +1,6 @@
 <script module lang="ts">
-	import type { MyBangRecord as EditorMyBangRecord } from '$lib/bang-data';
-	import type { SharedMyBangDraft } from '$lib/launcher/mybang-share';
+	import type { MyBangRecord as EditorMyBangRecord } from '#lib/bang-data.js';
+	import type { SharedMyBangDraft } from '#lib/launcher/mybang-share.js';
 
 	export type MyBangEditorSession = {
 		key: string;
@@ -19,9 +19,13 @@
 	import { resolve } from '$app/paths';
 	import { tick } from 'svelte';
 
-	import type { BangProviderId, MyBangRecord, ZbangRecord } from '$lib/bang-data';
-	import { formatBangCodes, normalizeBangCode, parseBangCodeInput } from '$lib/launcher/bang-code';
-	import type { LauncherHref } from '$lib/launcher/types';
+	import type { BangProviderId, MyBangRecord, ZbangRecord } from '#lib/bang-data.js';
+	import {
+		formatBangCodes,
+		normalizeBangCode,
+		parseBangCodeInput
+	} from '#lib/launcher/bang-code.js';
+	import type { LauncherHref } from '#lib/launcher/types.js';
 
 	type FieldName = 'name' | 'codes' | 'urlTemplate';
 	type ValidationErrors = Partial<Record<FieldName, string>>;

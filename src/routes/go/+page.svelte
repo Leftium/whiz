@@ -2,21 +2,21 @@
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 
-	import { readExecutionSettings, readMyBangs } from '$lib/bang-data';
-	import DefaultSearchSetup from '$lib/components/DefaultSearchSetup.svelte';
+	import { readExecutionSettings, readMyBangs } from '#lib/bang-data.js';
+	import DefaultSearchSetup from '#lib/components/DefaultSearchSetup.svelte';
 	import {
 		getSearchUrl,
 		hasBangToken,
 		resolveBangExecutionWithExtendedFallback
-	} from '$lib/launcher/bang-resolver';
+	} from '#lib/launcher/bang-resolver.js';
 	import {
 		createBangSearchHistoryEvent,
 		createPlainSearchHistoryEvent,
 		recordSearchHistoryEvent,
 		type SearchHistoryEvent
-	} from '$lib/search-history';
-	import { readStoredExecutionSettings } from '$lib/settings.svelte';
-	import { loadShippedBangCatalog } from '$lib/shipped-bang-catalog';
+	} from '#lib/search-history.js';
+	import { readStoredExecutionSettings } from '#lib/settings.svelte.js';
+	import { loadShippedBangCatalog } from '#lib/shipped-bang-catalog.js';
 
 	const query = page.url.searchParams.get('q')?.trim() ?? '';
 	let errorMessage = $state('');

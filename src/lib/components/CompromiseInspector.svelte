@@ -174,7 +174,7 @@
 	import { SvelteURLSearchParams } from 'svelte/reactivity';
 	import Inspect from 'svelte-inspect-value';
 
-	import { createCompromiseDoc, nlp } from '$lib/compromise';
+	import { createCompromiseDoc, nlp } from '#lib/compromise.js';
 
 	type CompromiseTerm = {
 		text: string;
@@ -267,11 +267,7 @@
 			params.set('expr', nextExpression);
 		}
 
-		void goto(resolve(`/nlp?${params}`), {
-			replaceState: true,
-			noScroll: true,
-			keepFocus: true
-		});
+		void goto(resolve(`nlp?${params}`), { replaceState: true, reset: false });
 	}
 
 	function runExpressionShortcut(event: KeyboardEvent) {

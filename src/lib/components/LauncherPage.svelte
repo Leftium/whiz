@@ -13,24 +13,24 @@
 		type MyBangRecord,
 		type RankedZbangCatalog,
 		type ZbangRecord
-	} from '$lib/bang-data';
+	} from '#lib/bang-data.js';
 	import {
 		applyBang,
 		filterBangs,
 		prepareBangs,
 		type BangFilterResult,
 		type BangHighlightSegment
-	} from '$lib/bang-filter';
-	import ExpandingTextarea from '$lib/components/ExpandingTextarea.svelte';
-	import Header from '$lib/components/Header.svelte';
+	} from '#lib/bang-filter.js';
+	import ExpandingTextarea from '#lib/components/ExpandingTextarea.svelte';
+	import Header from '#lib/components/Header.svelte';
 	import JournalEntryEditor, {
 		type JournalEntryEditorSave,
 		type JournalEntryEditorSession
-	} from '$lib/components/JournalEntryEditor.svelte';
+	} from '#lib/components/JournalEntryEditor.svelte';
 	import MyBangEditor, {
 		type MyBangEditorSave,
 		type MyBangEditorSession
-	} from '$lib/components/MyBangEditor.svelte';
+	} from '#lib/components/MyBangEditor.svelte';
 	import {
 		createJournalEntry,
 		deleteJournalEntry,
@@ -40,12 +40,12 @@
 		listJournalEntries,
 		updateJournalEntry,
 		type JournalEntry
-	} from '$lib/journal';
+	} from '#lib/journal.js';
 	import {
 		buildJournalSummaryGroups,
 		type JournalSummaryGroup,
 		type JournalSummarySignal
-	} from '$lib/journal-summary';
+	} from '#lib/journal-summary.js';
 	import {
 		displayBangCode,
 		formatBangCodes,
@@ -53,21 +53,21 @@
 		hasBangCodeOverlap,
 		normalizeBangCode,
 		removeBangCodeOverlaps
-	} from '$lib/launcher/bang-code';
-	import { createBangCodeMap, parseBangComposition } from '$lib/launcher/bang-composition';
+	} from '#lib/launcher/bang-code.js';
+	import { createBangCodeMap, parseBangComposition } from '#lib/launcher/bang-composition.js';
 	import {
 		getSearchUrl,
 		resolveBangExecutionWithExtendedFallback
-	} from '$lib/launcher/bang-resolver';
-	import { getCompromiseSignals, unique } from '$lib/launcher/compromise-signals';
-	import { getLauncherMode, launcherModes } from '$lib/launcher/modes';
+	} from '#lib/launcher/bang-resolver.js';
+	import { getCompromiseSignals, unique } from '#lib/launcher/compromise-signals.js';
+	import { getLauncherMode, launcherModes } from '#lib/launcher/modes.js';
 	import {
 		createSharedMyBangHash,
 		readSharedMyBangHash,
 		removeSharedMyBangHash,
 		type SharedMyBangDraft
-	} from '$lib/launcher/mybang-share';
-	import { getKeywordScoreBoost, rankItems, scoreInsight } from '$lib/launcher/ranking';
+	} from '#lib/launcher/mybang-share.js';
+	import { getKeywordScoreBoost, rankItems, scoreInsight } from '#lib/launcher/ranking.js';
 	import {
 		createBangSearchHistoryEvent,
 		createPlainSearchHistoryEvent,
@@ -76,7 +76,7 @@
 		listSearchHistoryEvents,
 		recordSearchHistoryEvent,
 		type SearchHistoryEvent
-	} from '$lib/search-history';
+	} from '#lib/search-history.js';
 	import type {
 		BangComposition,
 		BangEntry,
@@ -90,7 +90,7 @@
 		LauncherMode,
 		LauncherModeId,
 		LauncherPlugin
-	} from '$lib/launcher/types';
+	} from '#lib/launcher/types.js';
 	import {
 		setBangProvider,
 		setColorScheme,
@@ -101,8 +101,8 @@
 		type ColorScheme,
 		type ExecutionSettings,
 		type SearchProvider
-	} from '$lib/settings.svelte';
-	import { loadShippedBangCatalog } from '$lib/shipped-bang-catalog';
+	} from '#lib/settings.svelte.js';
+	import { loadShippedBangCatalog } from '#lib/shipped-bang-catalog.js';
 
 	const stagedBangQueryParam = 'bq';
 	const stagedShortcutSequenceParam = 'sk';
@@ -681,7 +681,7 @@
 		hadSettingsFilter = false;
 	});
 
-	function readUrlLauncherState(searchParams: URLSearchParams): UrlLauncherState {
+	function readUrlLauncherState(searchParams: Pick<URLSearchParams, 'get'>): UrlLauncherState {
 		const stagedQuery = searchParams.get(stagedBangQueryParam);
 		const value = stagedQuery ?? searchParams.get('q') ?? '';
 		const shortcutSequence = sanitizeUrlShortcutSequence(
