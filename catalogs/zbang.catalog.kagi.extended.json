@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "100973b21c0d0f924a34d750b9f5caa6a32285310406f69be6e6eb0a90414aa7"
+			"hash": "bbe983c17b38bb56142a7b3b81b9f73f993138eeced6d5ff66caed625edafe55"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
