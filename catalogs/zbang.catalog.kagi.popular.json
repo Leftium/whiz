@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "bbe983c17b38bb56142a7b3b81b9f73f993138eeced6d5ff66caed625edafe55"
+			"hash": "d139e474e309b08a7e2a9aec672f57e07a9cf5a49267cf20560c907e91abd9e9"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -484,6 +484,15 @@
 			"tags": ["Research/Reference (words)"],
 			"urls": {
 				"s": "https://en.wiktionary.org/wiki/Special:Search?search=%s&go=Define"
+			}
+		},
+		{
+			"popularity": 1688,
+			"name": "MyAnimeList",
+			"code": ["!mal", "!myanimelist", "!malall", "!malist"],
+			"tags": ["Entertainment/TV"],
+			"urls": {
+				"s": "https://myanimelist.net/search/all?q=%s"
 			}
 		},
 		{
@@ -3137,15 +3146,6 @@
 			"tags": ["Shopping/Big box/department"],
 			"urls": {
 				"s": "https://www.homedepot.com/s/%s"
-			}
-		},
-		{
-			"popularity": 102,
-			"name": "MyAnimeList Manga",
-			"code": ["!mml", "!manga"],
-			"tags": ["Multimedia/Books"],
-			"urls": {
-				"s": "https://myanimelist.net/manga.php?q=%s"
 			}
 		},
 		{
@@ -7873,15 +7873,6 @@
 		},
 		{
 			"popularity": 22,
-			"name": "MyAnimeList Search All",
-			"code": ["!malall"],
-			"tags": ["Entertainment/TV"],
-			"urls": {
-				"s": "https://myanimelist.net/search/all?q=%s"
-			}
-		},
-		{
-			"popularity": 22,
 			"name": "Njuskalo.hr",
 			"code": ["!njuskalo"],
 			"tags": ["Shopping/Online (marketplace)"],
@@ -9727,15 +9718,6 @@
 		},
 		{
 			"popularity": 14,
-			"name": "MyAnimeList",
-			"code": ["!mal", "!myanimelist", "!malist"],
-			"tags": ["News/Specialty"],
-			"urls": {
-				"s": "https://myanimelist.net/anime.php?q=%s"
-			}
-		},
-		{
-			"popularity": 14,
 			"name": "Naver Papago",
 			"code": ["!ppg", "!nvenkr"],
 			"tags": ["Translation/General"],
@@ -9782,10 +9764,10 @@
 		{
 			"popularity": 14,
 			"name": "Pubmed",
-			"code": ["!pm", "!pubmed", "!pub", "!pmd", "!pmid"],
+			"code": ["!pm", "!pubmed", "!publabs", "!pub", "!pmd", "!pmid"],
 			"tags": ["Research/Academic"],
 			"urls": {
-				"s": "https://www.ncbi.nlm.nih.gov/pubmed/?term=%s"
+				"s": "https://pubmed.ncbi.nlm.nih.gov/?term=%s"
 			}
 		},
 		{
@@ -17674,9 +17656,9 @@
 		},
 		{
 			"popularity": 3,
-			"name": "AnimeNewsNetwork Encyclopedia",
+			"name": "Anime News Network Encyclopedia",
 			"code": ["!anne"],
-			"tags": ["Entertainment/Comics"],
+			"tags": ["Entertainment/TV"],
 			"urls": {
 				"s": "https://www.animenewsnetwork.com/encyclopedia/search/name?only=anime&q=%s"
 			}
@@ -21121,6 +21103,15 @@
 		},
 		{
 			"popularity": 1,
+			"name": "AniList (Manga)",
+			"code": ["!alm", "!anilsitm", "!almanga"],
+			"tags": ["Entertainment/Comics"],
+			"urls": {
+				"s": "https://anilist.co/search/manga?search=%s"
+			}
+		},
+		{
+			"popularity": 1,
 			"name": "App Store (Mac)",
 			"code": ["!dmg", "!macapps", "!appstoremac", "!appsmac"],
 			"tags": ["Tech/Downloads (apps)"],
@@ -21657,6 +21648,15 @@
 			"tags": ["Research/Academic"],
 			"urls": {
 				"s": "https://www.deciphergenomics.org/search?q=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "DeepWiki",
+			"code": ["!dwi", "!deepwiki", "!deepw"],
+			"tags": ["Tech/Programming"],
+			"urls": {
+				"s": "https://kagi.com/search?q=%s+site:deepwiki.com"
 			}
 		},
 		{
@@ -23043,6 +23043,15 @@
 		},
 		{
 			"popularity": 1,
+			"name": "Kitsu Manga",
+			"code": ["!ksum", "!kitsum", "!mangas"],
+			"tags": ["Entertainment/Comics"],
+			"urls": {
+				"s": "https://kitsu.io/manga?text=%s"
+			}
+		},
+		{
+			"popularity": 1,
 			"name": "KLIPY",
 			"code": ["!klipy"],
 			"tags": ["Multimedia/Images"],
@@ -23669,6 +23678,24 @@
 			"tags": ["Research/Academic"],
 			"urls": {
 				"s": "https://digitale-sammlungen.de/search?query=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "MyAnimeList (Anime)",
+			"code": ["!mala"],
+			"tags": ["Entertainment/TV"],
+			"urls": {
+				"s": "https://myanimelist.net/anime.php?q=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "MyAnimeList (Manga)",
+			"code": ["!mml", "!manga", "!malm"],
+			"tags": ["Entertainment/Comics"],
+			"urls": {
+				"s": "https://myanimelist.net/manga.php?q=%s"
 			}
 		},
 		{
@@ -26184,6 +26211,15 @@
 		},
 		{
 			"popularity": 1,
+			"name": "OsmAnd",
+			"code": ["!osmand"],
+			"tags": ["Online Services/Maps"],
+			"urls": {
+				"s": "https://osmand.net/map/search/result/?query=%s"
+			}
+		},
+		{
+			"popularity": 1,
 			"name": "Oxlint (ESLint Rule)",
 			"code": ["!oxlinte", "!oxlinteslint", "!oxlintes"],
 			"tags": ["Tech/Languages (javascript)"],
@@ -27512,6 +27548,15 @@
 			"tags": ["Entertainment/Misc"],
 			"urls": {
 				"s": "https://wob.coppermind.net/adv_search/?query=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Wowhead Forever",
+			"code": ["!whf", "!fwow", "!wowforever", "!wowhf"],
+			"tags": ["Entertainment/Games (WOW)"],
+			"urls": {
+				"s": "https://forever.wowhead.com/search?q=%s"
 			}
 		},
 		{
