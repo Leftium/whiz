@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "d139e474e309b08a7e2a9aec672f57e07a9cf5a49267cf20560c907e91abd9e9"
+			"hash": "ce35cd268d5760ae5bb211212931e1c616c4ab84712bbef26e2d7b8d63387b4b"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -21967,6 +21967,15 @@
 		},
 		{
 			"popularity": 1,
+			"name": "Find Case Law (National Archives)",
+			"code": ["!fcl"],
+			"tags": ["Research/Law"],
+			"urls": {
+				"s": "https://caselaw.nationalarchives.gov.uk/search?query=%s"
+			}
+		},
+		{
+			"popularity": 1,
 			"name": "Finn.no Jobb",
 			"code": ["!finnjobb"],
 			"tags": ["Online Services/Jobs"],
@@ -22332,6 +22341,15 @@
 			"tags": ["Shopping/Online"],
 			"urls": {
 				"s": "https://www.ikaros.net/SearchDisplay?storeId=13152&sType=SimpleSearch&searchTerm=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Île-de-France Mobilités",
+			"code": ["!idfm"],
+			"tags": ["Research/Travel"],
+			"urls": {
+				"s": "https://www.iledefrance-mobilites.fr/#%s"
 			}
 		},
 		{

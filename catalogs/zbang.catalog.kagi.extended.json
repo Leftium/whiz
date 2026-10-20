@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "d139e474e309b08a7e2a9aec672f57e07a9cf5a49267cf20560c907e91abd9e9"
+			"hash": "ce35cd268d5760ae5bb211212931e1c616c4ab84712bbef26e2d7b8d63387b4b"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -19363,7 +19363,7 @@
 		},
 		{
 			"popularity": 0,
-			"name": "English WIkinews",
+			"name": "English Wikinews",
 			"code": ["!enwn"],
 			"tags": ["News/International"],
 			"urls": {
