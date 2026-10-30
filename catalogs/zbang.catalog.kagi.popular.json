@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "ce35cd268d5760ae5bb211212931e1c616c4ab84712bbef26e2d7b8d63387b4b"
+			"hash": "97ca7d69333de389086732b895c0ea3711839cfba6eba3d957c5d0a23aec33c7"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -300,7 +300,7 @@
 		{
 			"popularity": 3375,
 			"name": "NixOS Packages Search",
-			"code": ["!nixpkgs"],
+			"code": ["!nixpkg", "!nixpkgs"],
 			"tags": ["Tech/Languages (nix)"],
 			"urls": {
 				"s": "https://search.nixos.org/packages?query=%s"
@@ -1127,15 +1127,6 @@
 			"tags": ["Tech/Sysadmin"],
 			"urls": {
 				"s": "https://hub.docker.com/search?q=%s"
-			}
-		},
-		{
-			"popularity": 514,
-			"name": "NixOS Packages",
-			"code": ["!nixpkg"],
-			"tags": ["Tech/Downloads"],
-			"urls": {
-				"s": "https://nixos.org/nixos/packages.html?query=%s"
 			}
 		},
 		{

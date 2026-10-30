@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "ce35cd268d5760ae5bb211212931e1c616c4ab84712bbef26e2d7b8d63387b4b"
+			"hash": "97ca7d69333de389086732b895c0ea3711839cfba6eba3d957c5d0a23aec33c7"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -59805,7 +59805,7 @@
 			"code": ["!postch", "!swisspost"],
 			"tags": ["Online Services/Tracking"],
 			"urls": {
-				"s": "https://www.post.ch/EasyTrack/submitParcelData.do?formattedParcelCodes=%s"
+				"s": "https://mys.post.ch/my-consignments/deeplink-search?formattedParcelCodes=%s"
 			}
 		},
 		{
