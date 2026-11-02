@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "97ca7d69333de389086732b895c0ea3711839cfba6eba3d957c5d0a23aec33c7"
+			"hash": "194888f837177771248297976310cfbc75bf19a05b05b36dbbd79e69668a85e3"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -18004,60 +18004,6 @@
 		},
 		{
 			"popularity": 0,
-			"name": "Ebay Kleinanzeigen",
-			"code": ["!eka", "!ebaykleinanzeigen"],
-			"tags": ["Shopping/Online (marketplace)"],
-			"urls": {
-				"s": "https://www.ebay-kleinanzeigen.de/s-%s/k0"
-			}
-		},
-		{
-			"popularity": 0,
-			"name": "ebay Kleinanzeigen Aachen",
-			"code": ["!ekac"],
-			"tags": ["Shopping/Online (marketplace)"],
-			"urls": {
-				"s": "https://www.ebay-kleinanzeigen.de/s-aachen/%s/k0l1921"
-			}
-		},
-		{
-			"popularity": 0,
-			"name": "eBay Kleinanzeigen Berlin",
-			"code": ["!ekb"],
-			"tags": ["Shopping/Online"],
-			"urls": {
-				"s": "https://kleinanzeigen.ebay.de/anzeigen/s-berlin/%s/k0l3331"
-			}
-		},
-		{
-			"popularity": 0,
-			"name": "eBay Kleinanzeigen Hamburg",
-			"code": ["!ekh"],
-			"tags": ["Shopping/Online (marketplace)"],
-			"urls": {
-				"s": "https://www.ebay-kleinanzeigen.de/s-hamburg/%s/k0l9409"
-			}
-		},
-		{
-			"popularity": 0,
-			"name": "ebay Kleinanzeigen Köln",
-			"code": ["!ekk"],
-			"tags": ["Shopping/Online (marketplace)"],
-			"urls": {
-				"s": "https://www.ebay-kleinanzeigen.de/s-koeln/%s/k0l945"
-			}
-		},
-		{
-			"popularity": 0,
-			"name": "eBay Kleinanzeigen München",
-			"code": ["!ekm"],
-			"tags": ["Shopping/Online (marketplace)"],
-			"urls": {
-				"s": "https://www.ebay-kleinanzeigen.de/s-muenchen/%s/k0l6411"
-			}
-		},
-		{
-			"popularity": 0,
 			"name": "eBay Records",
 			"code": ["!ebyrec"],
 			"tags": ["Shopping/Online (marketplace)"],
@@ -34669,15 +34615,6 @@
 			"tags": ["Entertainment/Events"],
 			"urls": {
 				"s": "https://kktix.com/events?search=%s"
-			}
-		},
-		{
-			"popularity": 0,
-			"name": "Kleinanzeigen Hannover",
-			"code": ["!ekhr"],
-			"tags": ["Shopping/Online (marketplace)"],
-			"urls": {
-				"s": "https://www.ebay-kleinanzeigen.de/s-hannover/%s/k0l3155"
 			}
 		},
 		{
@@ -57294,7 +57231,7 @@
 			"code": ["!chs"],
 			"tags": ["Tech/Cryptocurrency"],
 			"urls": {
-				"s": "https://chain.so/address/%s"
+				"s": "https://sochain.com/search?q=%s"
 			}
 		},
 		{

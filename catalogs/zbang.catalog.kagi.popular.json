@@ -5,7 +5,7 @@
 	"sources": [
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/bangs.json",
-			"hash": "97ca7d69333de389086732b895c0ea3711839cfba6eba3d957c5d0a23aec33c7"
+			"hash": "194888f837177771248297976310cfbc75bf19a05b05b36dbbd79e69668a85e3"
 		},
 		{
 			"url": "https://github.com/kagisearch/bangs/raw/refs/heads/main/data/kagi_bangs.json",
@@ -2750,15 +2750,6 @@
 			"tags": ["News/Weather"],
 			"urls": {
 				"s": "https://www.weather.com/search/enhancedlocalsearch?where=%s&loctypes=1/5/9/11/13/19/&from=hdr"
-			}
-		},
-		{
-			"popularity": 120,
-			"name": "eBay Kleinanzeigen",
-			"code": ["!klein"],
-			"tags": ["Shopping/Online (marketplace)"],
-			"urls": {
-				"s": "https://www.ebay-kleinanzeigen.de/%s/k0"
 			}
 		},
 		{
@@ -7292,7 +7283,7 @@
 			"code": ["!qrz"],
 			"tags": ["Entertainment/Misc"],
 			"urls": {
-				"s": "https://www.qrz.com/db/?callsign=%s&cmd=Search"
+				"s": "https://www.qrz.com/db/%s"
 			}
 		},
 		{
@@ -16261,15 +16252,6 @@
 		},
 		{
 			"popularity": 4,
-			"name": "eBay Kleinanzeigen Leipzig",
-			"code": ["!ekl"],
-			"tags": ["Shopping/Online (marketplace)"],
-			"urls": {
-				"s": "https://www.ebay-kleinanzeigen.de/s-leipzig/%s/k0l4233"
-			}
-		},
-		{
-			"popularity": 4,
 			"name": "eBay Motors",
 			"code": ["!em"],
 			"tags": ["Shopping/Online (marketplace)"],
@@ -22084,6 +22066,15 @@
 		},
 		{
 			"popularity": 1,
+			"name": "Google (Web)",
+			"code": ["!gweb"],
+			"tags": ["Online Services/Google"],
+			"urls": {
+				"s": "https://www.google.com/search?udm=web&q=%s"
+			}
+		},
+		{
+			"popularity": 1,
 			"name": "Google AI Mode",
 			"code": ["!gai", "!googleai", "!гии"],
 			"tags": ["Online Services/AI Chatbots"],
@@ -23057,6 +23048,78 @@
 			"tags": ["Entertainment/Comics"],
 			"urls": {
 				"s": "https://kitsu.io/manga?text=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Kleinanzeigen",
+			"code": ["!kad", "!kleinanzeigen"],
+			"tags": ["Shopping/Online (marketplace)"],
+			"urls": {
+				"s": "https://www.kleinanzeigen.de/s-%s/k0"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Kleinanzeigen Aachen",
+			"code": ["!kaac"],
+			"tags": ["Shopping/Online (marketplace)"],
+			"urls": {
+				"s": "https://www.kleinanzeigen.de/s-aachen/%s/k0l1921"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Kleinanzeigen Berlin",
+			"code": ["!kab"],
+			"tags": ["Shopping/Online (marketplace)"],
+			"urls": {
+				"s": "https://www.kleinanzeigen.de/s-berlin/%s/k0l3331"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Kleinanzeigen Hamburg",
+			"code": ["!kah"],
+			"tags": ["Shopping/Online (marketplace)"],
+			"urls": {
+				"s": "https://www.kleinanzeigen.de/s-hamburg/%s/k0l9409"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Kleinanzeigen Hannover",
+			"code": ["!kahr"],
+			"tags": ["Shopping/Online (marketplace)"],
+			"urls": {
+				"s": "https://www.kleinanzeigen.de/s-hannover/%s/k0l3155"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Kleinanzeigen Köln",
+			"code": ["!kak"],
+			"tags": ["Shopping/Online (marketplace)"],
+			"urls": {
+				"s": "https://www.kleinanzeigen.de/s-koeln/%s/k0l945"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Kleinanzeigen Leipzig",
+			"code": ["!kal"],
+			"tags": ["Shopping/Online (marketplace)"],
+			"urls": {
+				"s": "https://www.kleinanzeigen.de/s-leipzig/%s/k0l4233"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Kleinanzeigen München",
+			"code": ["!kamuc"],
+			"tags": ["Shopping/Online (marketplace)"],
+			"urls": {
+				"s": "https://www.kleinanzeigen.de/s-muenchen/%s/k0l6411"
 			}
 		},
 		{
@@ -26738,6 +26801,15 @@
 			"tags": ["Research/Reference"],
 			"urls": {
 				"s": "https://szl.wikipedia.org/w/index.php?search=%s"
+			}
+		},
+		{
+			"popularity": 1,
+			"name": "Simkl",
+			"code": ["!simkl"],
+			"tags": ["Entertainment"],
+			"urls": {
+				"s": "https://simkl.com/search/?type=all&q=%s"
 			}
 		},
 		{
